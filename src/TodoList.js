@@ -12,6 +12,7 @@ class TodoList extends Component{
 
         this.addItem = this.addItem.bind(this);
         this.deleteItem = this.deleteItem.bind(this);
+        this.deleteAll = this.deleteAll.bind(this);
 
     }
 
@@ -45,19 +46,30 @@ class TodoList extends Component{
         });
     }
 
+    deleteAll(){
+        this.setState({
+            items:[]
+        });
+    }
+
     render(){
         return(
             <div className="todoListMain">
                 <div className="header">
                     <form onSubmit={this.addItem}>
                         <input ref={(a) => this._inputElement = a}
-                            placeholder="Digite uma taréfa">
+                            placeholder="Digite uma tarefa">
                         </input>
                         <button type="submit">Add</button>
                     </form>
-                </div>  
-                <TodoItems entries={this.state.items}
-                delete={this.deleteItem}/>          
+                </div> 
+                <div className="body"> 
+                    <TodoItems entries={this.state.items}
+                    delete={this.deleteItem}/> 
+                </div>
+                <div className="footer">   
+                    <button type="submit" onClick={this.deleteAll}>Limpar Lista</button>
+                 </div>                 
             </div>
         );
     }
