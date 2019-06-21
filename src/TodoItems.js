@@ -10,7 +10,8 @@ class TodoItems extends Component{
    
     createTasks(item){
         return <li onClick={() => this.delete(item.key)}
-        key={item.key}>{item.text}</li>
+        key={item.key}>{item.text}
+        </li>
     }
 
     delete(key){

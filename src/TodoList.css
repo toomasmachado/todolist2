@@ -1,8 +1,77 @@
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
 .todoListMain .header input{
     padding: 10px;
     font-size: 16px;
     border: 2px solid #FFF;
-    width: 165px;
+    width: 290px;
+    box-shadow: 3px 3px 3px #888;
+    margin-top: 50px;
 }
 
 .todoListMain .header button{
@@ -13,12 +82,14 @@
     background-color: #0066ff;
     color: #FFF;
     border: 2px solid #0066ff;
+    box-shadow: 3px 3px 3px #888;
 }
 
 .todoListMain .header button:hover{
     background-color: #003399;
     border: 2px solid #003399;
     cursor: pointer;
+    box-shadow: inset 0 0 0 2px #0066ff;
 }
 
 .todoListMain .theList li{
@@ -35,6 +106,10 @@
 .todoListMain .theList li:hover{
     background-color: pink;
     cursor: pointer;
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
 }
 
 ul.theList{
@@ -50,10 +125,12 @@ ul.theList{
     color: #FFF;
     border: 2px solid red;
     width: 100%;
+    box-shadow: 3px 3px 3px #888;
 }
 
 .todoListMain .footer button:hover{
     background-color: darkred;
     border: 2px solid darkred;
     cursor: pointer;
+    box-shadow: inset 0 0 0 2px red;
 }

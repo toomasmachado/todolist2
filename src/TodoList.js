@@ -52,6 +52,10 @@ class TodoList extends Component{
         });
     }
 
+    editItem(){
+
+    }
+
     render(){
         return(
             <div className="todoListMain">
@@ -65,7 +69,9 @@ class TodoList extends Component{
                 </div> 
                 <div className="body"> 
                     <TodoItems entries={this.state.items}
-                    delete={this.deleteItem}/> 
+                    delete={this.deleteItem}
+                   /> 
+
                 </div>
                 <div className="footer">   
                     <button type="submit" onClick={this.deleteAll}>Limpar Lista</button>
